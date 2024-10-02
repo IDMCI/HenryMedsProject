@@ -31,13 +31,7 @@ class UserScheduleViewModel @Inject constructor(
     val uiState: StateFlow<UiState<String>> = _uiState
 
     val localDateTime = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault())
-    private val _selectedDate = MutableStateFlow<LocalDate?>(null
-//        LocalDate(
-//            localDateTime.year,
-//            localDateTime.month,
-//            localDateTime.dayOfMonth,
-//        )
-    )
+    private val _selectedDate = MutableStateFlow<LocalDate?>(null)
     val selectedDate: MutableStateFlow<LocalDate?> = _selectedDate
 
     init {
