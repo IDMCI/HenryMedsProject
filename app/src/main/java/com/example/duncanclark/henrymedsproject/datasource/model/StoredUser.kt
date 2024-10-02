@@ -8,6 +8,7 @@ import com.example.duncanclark.henrymedsproject.domain.model.UserSchedule
 import com.example.duncanclark.henrymedsproject.domain.model.UserType
 import kotlinx.serialization.Serializable
 
+// TODO: Investigate why kotlinx.serialization plugin compiler is not applied to module
 @Serializable
 @Entity(tableName = "provider_user_table")
 data class Provider(

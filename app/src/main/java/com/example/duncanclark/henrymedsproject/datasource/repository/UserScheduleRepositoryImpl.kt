@@ -19,6 +19,7 @@ class UserScheduleRepositoryImpl @Inject constructor(
     private val dao: UserScheduleDao,
     private val storedMapper: StoredMapper,
 ): UserScheduleRepository {
+    // Add remoteDataSource below
     override suspend fun getSchedule(user: User): Flow<Result<UserSchedule>> = flow {
         try {
             when(user.userType) {
@@ -34,6 +35,7 @@ class UserScheduleRepositoryImpl @Inject constructor(
         }
     }
 
+    // Add remoteDataSource below
     override suspend fun setSchedule(
         user: User,
         schedule: UserSchedule,

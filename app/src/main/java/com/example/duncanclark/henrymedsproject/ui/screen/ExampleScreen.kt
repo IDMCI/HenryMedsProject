@@ -1,9 +1,8 @@
-package com.example.duncanclark.henrymedsproject.ui
+package com.example.duncanclark.henrymedsproject.ui.screen
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -11,13 +10,13 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.duncanclark.henrymedsproject.ui.state.UiState
-import com.example.duncanclark.henrymedsproject.ui.viewmodel.UserScheduleViewModel
+import com.example.duncanclark.henrymedsproject.ui.viewmodel.ExampleViewModel
 
 @Composable
-fun UserScreen(
+fun ExampleScreen(
     modifier: Modifier,
     navController: NavController = rememberNavController(),
-    viewModel: UserScheduleViewModel = hiltViewModel()
+    viewModel: ExampleViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
