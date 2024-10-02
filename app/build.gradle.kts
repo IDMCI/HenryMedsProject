@@ -22,6 +22,11 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments(mapOf("room.schemaLocation" to "$projectDir/schemas"))
+            }
+        }
     }
 
     buildTypes {
@@ -91,4 +96,8 @@ dependencies {
     testImplementation(libs.mockito.core)
     testImplementation(libs.mockk)
     testImplementation(libs.mockito.kotlin)
+}
+
+kapt {
+    correctErrorTypes = true
 }

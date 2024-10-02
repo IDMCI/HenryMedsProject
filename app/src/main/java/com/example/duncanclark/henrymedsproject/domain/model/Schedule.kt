@@ -5,7 +5,8 @@ import kotlinx.datetime.LocalDateTime
 typealias Schedule = List<Event>
 
 data class Event(
-    val dateTime: LocalDateTime,
-    val withUserId: Long,
-    val withUserType: UserType,
+    val startTime: LocalDateTime,
+    val endTime: LocalDateTime,
+    val withUserId: Long?,
+    val withUserType: UserType?,
 )
