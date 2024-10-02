@@ -79,6 +79,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.kotlinx.date.time)
     implementation(libs.kotlinx.serialization.json)
+    implementation(libs.logging.interceptor)
     implementation(libs.dagger.hilt)
     kapt(libs.dagger.hilt.compiler)
 
@@ -87,15 +88,22 @@ dependencies {
     annotationProcessor(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
 
+    implementation(libs.retrofit)
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.retrofit.gson)
+    implementation(libs.retrofit.serialization)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
+    testImplementation(libs.coroutines.test)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     testImplementation(libs.mockito.core)
     testImplementation(libs.mockk)
     testImplementation(libs.mockito.kotlin)
+    testImplementation(libs.retrofit.mock)
 }
 
 kapt {

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HenryMedsProject</string>
+    <string name="reservations">Reservations</string>
 </resources>
