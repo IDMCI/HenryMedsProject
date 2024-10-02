@@ -2,7 +2,7 @@ package com.example.duncanclark.henrymedsproject.datasource.remote
 
 import javax.inject.Inject
 
-class ScheduleDataSourceImpl @Inject constructor(): ScheduleDataSource {
+class UserScheduleDataSourceImpl @Inject constructor(): UserScheduleDataSource {
     // TODO DC: Replace with live endpoint and use retrofit
     override fun getSchedule(): String {
         return "Not implemented yet!"
@@ -13,7 +13,7 @@ class ScheduleDataSourceImpl @Inject constructor(): ScheduleDataSource {
     }
 }
 
-interface ScheduleDataSource {
+interface UserScheduleDataSource {
     fun getSchedule(): String
     fun setSchedule(localDateTime: String)
 }
